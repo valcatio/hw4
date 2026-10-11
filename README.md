@@ -12,7 +12,8 @@
 ### Блок-схема:
 ![diagram](Lab_04_13.png)
 ## 2. Реализация программы
-```#include <stdio.h>
+```
+#include <stdio.h>
 #include <locale.h>
 
 void main() {
