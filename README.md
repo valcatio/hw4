@@ -12,7 +12,8 @@
 ### Блок-схема:
 ![diagram](Lab_04_13.png)
 ## 2. Реализация программы
-```
+```c
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <locale.h>
 
@@ -20,17 +21,13 @@ void main() {
     setlocale(LC_ALL, "RUS");
     int A, B;
     printf("Номер команды A: ");
-    scanf_s("%d", &A);
+    scanf("%d", &A);
 
     printf("Номер команды B: ");
-    scanf_s("%d", &B);
+    scanf("%d", &B);
 
-    if (A % 2 != B % 2) {
-        printf("Право первого хода получено\n");
-    }
-    else {
-        printf("Право первого хода не получено\n");
-    }
+    int res = ((A % 2 == 0) ^ (B % 2 == 0));
+    printf("Право первого хода получено (1 - да, 0 - нет): %d\n", res);
 }
 ```
 ## 3. Результаты работы программы
